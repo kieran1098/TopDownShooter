@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb0stxhbi6twi"]
+
+[ext_resource type="Script" uid="uid://b6whgo0r7vh18" path="res://Scripts/player.gd" id="1_jjgbg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bo1nx"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(133, 103)
+script = ExtResource("1_jjgbg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_bo1nx")
+
+[node name="Marker2D" type="Marker2D" parent="Player"]
